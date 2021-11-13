@@ -1,6 +1,6 @@
-import logo from './assets/logo.svg';
 import './styles/App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
       <header className="App-header">
         <h1>Bienvenidos a nuestra app oficial</h1>
       </header>
+      <main>
+       <ItemListContainer greeting="Próximamente todo nuestro catálogo"/>
+      </main>
     </div>
   );
 }
