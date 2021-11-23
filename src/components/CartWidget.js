@@ -2,7 +2,7 @@ import logo from '../assets/logoHus.jpg';
 
 function CartWidget () {
   return(
-    <img src={logo} className="logo-hus"/>
+    <img src={logo} className="logo-hus" alt="..."/>
   )
 }
 
