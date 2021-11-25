@@ -12,15 +12,12 @@ function ItemCount({stock, initial, onAdd}) {
 
 
   return (
-    <div className="card" style={{width: "18rem"}}>
       <div className="card-body">
-        <h5 className="card-title">Cupcake</h5>
         <button onClick={substractItem} className="btn btn-primary">-</button>
         <input type="text" id="txt" value={countItems} readOnly style={{width:"8rem", textAlign:"center"}}/>
         <button onClick={() => addItem(stock)} className="btn btn-primary">+</button>
         <button onClick={onAdd} className="btn btn-primary">Agregar al carrito</button>
       </div>
-    </div>
   )
 }
 

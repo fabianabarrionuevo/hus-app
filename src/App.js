@@ -1,6 +1,6 @@
 import './styles/App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './containers/ItemListContainer';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <h1>Bienvenidos a nuestra app oficial</h1>
       </header>
       <main>
-       <ItemListContainer greeting="Próximamente todo nuestro catálogo"/>
+       <ItemListContainer greeting="Nuestro catálogo"/>
       </main>
     </div>
   );
