@@ -4,3 +4,29 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
 }
+
+.productItem, .productDetail {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.card-body{
+  max-height: 30rem;
+  max-width: 20rem;
+}
+
+.product-title{
+  text-overflow: ellipsis;
+}
+
+.card-img-top{
+  max-width: 3rem;
+  width: 35%;
+  align-self: center;
+}
+
+.itemLink{
+  text-decoration: none;
+  color: black;
+}

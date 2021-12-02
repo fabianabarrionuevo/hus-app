@@ -1,0 +1,18 @@
+
+.nav-link{
+  cursor: pointer;
+}
+
+.nav-item{
+  align-self: center;
+}
+
+.nav-link:hover{
+  font-weight: 600;
+}
+
+.fa-shopping-cart{
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  vertical-align:middle;
+}

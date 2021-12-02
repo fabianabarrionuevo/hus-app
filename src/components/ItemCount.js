@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import '../styles/counter.css';
+
 function ItemCount({stock, initial, onAdd}) {
   const [countItems, setCountItems] = useState(initial);
 
@@ -12,9 +14,9 @@ function ItemCount({stock, initial, onAdd}) {
 
 
   return (
-      <div className="card-body">
+      <div className="card-body counter">
         <button onClick={substractItem} className="btn btn-primary">-</button>
-        <input type="text" id="txt" value={countItems} readOnly style={{width:"8rem", textAlign:"center"}}/>
+        <input type="text" id="txt" value={countItems} readOnly />
         <button onClick={() => addItem(stock)} className="btn btn-primary">+</button>
         <button onClick={onAdd} className="btn btn-primary">Agregar al carrito</button>
       </div>
