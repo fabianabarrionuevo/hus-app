@@ -1,3 +1,9 @@
+# Sobre el proyecto
+Aplicación de e-commerce realizada con React.js, con datos de varios productos de la API https://fakestoreapi.com/.
+Esta aplicacion usa useEfect para traer con funciones asincronas los datos de la api, useState para guardarlos y poder renderizarlos y pasarlos entre componentes como props.
+Usa UseParams para captar el parametro de la URL que se esta mostrando y asi renderizar diferente información. 
+Usa react-router-dom para la navegacion entre pestañas desde la navbar.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
