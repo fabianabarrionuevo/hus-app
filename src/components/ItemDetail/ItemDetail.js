@@ -1,5 +1,5 @@
-import ItemCount from "./ItemCount";
-import '../styles/itemDetail.css';
+import ItemCount from "../Counter/ItemCount";
+import './itemDetail.css';
 
 function ItemDetail({ item }) {
   

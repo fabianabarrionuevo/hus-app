@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetail from '../components/ItemDetail';
+import ItemDetail from '../components/ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
 import { getProductsById } from '../services/getItems';
-import Loader from '../components/Loader';
+import Loader from '../components/Loader/Loader';
 
 function ItemDetailContainer() {
   

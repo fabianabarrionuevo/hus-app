@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, useHistory } from "react-router-dom";
-import CartWidget from './CartWidget';
-import '../styles/navBar.css';
+import CartWidget from '../CartWidget';
+import './navBar.css';
 
 
 function NavBar() {

@@ -1,5 +1,5 @@
-import ItemCount from "./ItemCount";
-import '../styles/itemList.css';
+import ItemCount from "../Counter/ItemCount";
+import '../ItemList/itemList.css';
 import { NavLink } from "react-router-dom";
 
 function Item ({ productItem }) {
@@ -13,7 +13,7 @@ function Item ({ productItem }) {
           <button className="btn btn-primary">Detalle</button>
         </NavLink>
       </div>
-      <ItemCount stock={5} initial={1}/>
+      <ItemCount stock={5} initial={0}/>
     </div>
   )
 }

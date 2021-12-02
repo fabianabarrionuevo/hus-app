@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from "../components/ItemList";
+import ItemList from "../components/ItemList/ItemList";
+import Loader from "../components/Loader/Loader";
 import { getProductsByCatergory, getProducts } from "../services/getItems";
-import Loader from "../components/Loader";
 import '../styles/App.css';
 
 function ItemListContainer (props) {
