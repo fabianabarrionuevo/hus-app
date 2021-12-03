@@ -4,7 +4,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
 }
-
+.productItem{
+  width: 18rem;
+}
 .productItem, .productDetail {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-align: center;

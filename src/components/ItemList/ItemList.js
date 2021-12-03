@@ -4,9 +4,11 @@ import './itemList.css';
 function ItemList({ products }) {
   return (
     
-      <div className="item-list-container">
+      <div className="item-list-container" >
         {products.map(product => (
-          <Item productItem ={product} key={product.id}/>
+          <div key={product.id}>
+          <Item productItem ={product} />
+          </div>
         ))}
       </div>
     
