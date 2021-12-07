@@ -39,7 +39,9 @@ function NavBar() {
               <a className="nav-link" onClick={ () => history.push("/category/women")}>Ropa de Mujer</a>
             </li>
             <li className="nav-item">
+              <a className="nav-link" onClick={ () => history.push("/cart")}>
                 <i className="fas fa-shopping-cart"></i>
+              </a>
             </li>
           </ul>
         </div>

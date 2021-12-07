@@ -13,7 +13,6 @@ function Item ({ productItem }) {
           <button className="btn btn-primary">Detalle</button>
         </NavLink>
       </div>
-      <ItemCount stock={5} initial={0}/>
     </div>
   )
 }

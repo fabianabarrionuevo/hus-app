@@ -10,7 +10,7 @@ function ItemListContainer (props) {
   const [ products, setProducts ] = useState([]);
   const [ loading, setLoading ] = useState(false);
   const { categoryName } = useParams();
-  console.log(categoryName)
+
 
   useEffect( () => {
    ( async () => {
@@ -28,7 +28,7 @@ function ItemListContainer (props) {
 
   }, [categoryName]);
 
-console.log(products);
+
 
   return (
     <>

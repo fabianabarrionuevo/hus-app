@@ -4,7 +4,7 @@ export const getProducts = () => {
     fetch(`https://fakestoreapi.com/products`)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      //console.log(data);
       resolve(data);
     })
     .catch(error => {
@@ -19,7 +19,7 @@ export const getProductsById = (id) => {
     fetch(`https://fakestoreapi.com/products/${id}`)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      //console.log(data);
       resolve(data);
     })
     .catch(error => {
@@ -34,7 +34,7 @@ export const getProductsByCatergory = (categoryName) => {
     fetch(`https://fakestoreapi.com/products`)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      //console.log(data);
       const productsByCategory = data.filter(data => data.category.startsWith(categoryName))
       resolve(productsByCategory);
     })
