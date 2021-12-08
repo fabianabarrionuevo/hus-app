@@ -1,10 +1,11 @@
-import logo from '../assets/logoHus.jpg';
-
+import { Link } from 'react-router-dom';
 
 function CartWidget () {
 
   return(
-      <img src={logo} className="logo-hus" alt="logo de la marca"/>
+    <Link to="/cart">
+      <i className="fas fa-shopping-cart"></i>
+    </Link>
   )
 }
 

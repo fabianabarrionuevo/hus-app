@@ -13,14 +13,15 @@ function ItemListContainer (props) {
 
 
   useEffect( () => {
+    setLoading(true);
    ( async () => {
      if(categoryName !== undefined){
        const products = await getProductsByCatergory(categoryName);
-       setLoading(true);
+       setLoading(false);
        setProducts(products);
      } else {
        const products = await getProducts();
-       setLoading(true);
+       setLoading(false);
        setProducts(products);
        
      }
@@ -28,16 +29,14 @@ function ItemListContainer (props) {
 
   }, [categoryName]);
 
-
-
   return (
     <>
       <h2>{props.greeting}</h2>
       <div className="listContainer">
-        {loading ?
-        <ItemList products={products}/>
-        : 
+        {loading ? 
         <Loader />
+        :
+        <ItemList products={products}/>
         }
       </div>
      

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ItemCount from "../Counter/ItemCount";
 import './itemDetail.css';
-
+import Cart from "../Cart/Cart";
 
 function ItemDetail({ item }) {
 
@@ -12,11 +12,9 @@ function ItemDetail({ item }) {
     setQuantityToAdd(qty);
   }
 
-console.log(quantityToAdd);
-
   return (
     
-    <div className="card productDetail" key={item.id}>
+    <div className="card productDetail" >
       <img src={item.image} className="card-img-top" alt={item.title} />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
@@ -26,7 +24,7 @@ console.log(quantityToAdd);
         {quantityToAdd ?
         <NavLink to="/cart">
           <button className="btn btn-primary shop-end">
-          Finalizar compra
+            Finalizar compra
           </button>
         </NavLink>
          : 

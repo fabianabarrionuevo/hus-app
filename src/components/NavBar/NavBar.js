@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, useHistory } from "react-router-dom";
-import CartWidget from '../CartWidget';
+import Logo from '../Logo';
+import CartWidget from "../CartWidget";
 import './navBar.css';
 
 
@@ -10,7 +11,7 @@ function NavBar() {
     <nav className="navbar navbar-light navbar-expand-lg bg-light fixed-top">
     <div className="container-fluid">
       <a onClick={ () => history.push('/')} >
-        <CartWidget />
+        <Logo />
       </a>
       <a className="navbar-brand" onClick={ () => history.push('/')}>HUS</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
@@ -40,7 +41,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" onClick={ () => history.push("/cart")}>
-                <i className="fas fa-shopping-cart"></i>
+                <CartWidget />
               </a>
             </li>
           </ul>

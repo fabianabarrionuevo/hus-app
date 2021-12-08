@@ -6,24 +6,25 @@ import Loader from '../components/Loader/Loader';
 
 function ItemDetailContainer() {
   
-  const [ itemDetail, setItemDetail ] = useState();
+  const [ item, setItem ] = useState();
   const [ loading, setLoading ] = useState(false);
   const { productId } = useParams();
-  
+ 
+
   useEffect(() => {
     getProductsById(productId)
     .then(res => {
-      setItemDetail(res);
+      setItem(res);
       setLoading(true);
     })
     .catch(error => console.log(error))
 
-  }, [productId]);
-  
+  }, []);
+ 
   
   return (
     <div>
-      {loading ? <ItemDetail item={itemDetail} /> : <Loader />}
+      {loading ? <ItemDetail item={item} /> : <Loader />}
     </div>
   )
 }

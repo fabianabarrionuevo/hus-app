@@ -1,5 +1,4 @@
 export const getProducts = () => {
-
   return new Promise ((resolve, reject) => {
     fetch(`https://fakestoreapi.com/products`)
     .then(response => response.json())

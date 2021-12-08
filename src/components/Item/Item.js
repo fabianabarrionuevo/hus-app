@@ -1,4 +1,3 @@
-import ItemCount from "../Counter/ItemCount";
 import '../ItemList/itemList.css';
 import { NavLink } from "react-router-dom";
 
