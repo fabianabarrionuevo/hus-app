@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, useHistory } from "react-router-dom";
-import Logo from '../Logo';
-import CartWidget from "../CartWidget";
+import Logo from '../Logo/Logo'
+import CartWidget from "../Cart/CartWidget";
 import './navBar.css';
 
 
@@ -10,10 +10,10 @@ function NavBar() {
     <Router>
     <nav className="navbar navbar-light navbar-expand-lg bg-light fixed-top">
     <div className="container-fluid">
-      <a onClick={ () => history.push('/')} >
+      <div onClick={ () => history.push('/')} >
         <Logo />
-      </a>
-      <a className="navbar-brand" onClick={ () => history.push('/')}>HUS</a>
+      </div>
+      <div className="navbar-brand" onClick={ () => history.push('/')}>HUS</div>
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -24,25 +24,23 @@ function NavBar() {
         </div>
         <div className="offcanvas-body">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" onClick={ () => history.push('/')}>Home</a>
+            <li className="nav-item" onClick={ () => history.push('/')}>
+              Home
+            </li>
+            <li className="nav-item" onClick={ () => history.push('/category/electronics')}>
+              Electronica
+            </li>
+            <li className="nav-item" onClick={ () => history.push('/category/jewelery')}>
+              Joyeria
+            </li>
+            <li className="nav-item" onClick={ () => history.push("/category/men")}>
+              Ropa de Hombre
+            </li>
+            <li className="nav-item" onClick={ () => history.push("/category/women")}>
+             Ropa de Mujer
             </li>
             <li className="nav-item">
-              <a className="nav-link" onClick={ () => history.push('/category/electronics')}>Electronica</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" onClick={ () => history.push('/category/jewelery')}>Joyeria</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" onClick={ () => history.push("/category/men")}>Ropa de Hombre</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" onClick={ () => history.push("/category/women")}>Ropa de Mujer</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" onClick={ () => history.push("/cart")}>
                 <CartWidget />
-              </a>
             </li>
           </ul>
         </div>

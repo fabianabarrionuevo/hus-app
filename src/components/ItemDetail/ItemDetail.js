@@ -1,35 +1,54 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import ItemCount from "../Counter/ItemCount";
 import './itemDetail.css';
-import Cart from "../Cart/Cart";
+import { CartContext } from "../../context/CartContext";
 
 function ItemDetail({ item }) {
+  const {id, title, category, price, image, description } = item;
+
+  const {cart, addItem, inCart, editCount} = useContext(CartContext);
 
   const [quantityToAdd, setQuantityToAdd] = useState(0);
 
-  function onAdd(qty){
-    setQuantityToAdd(qty);
+  const onAdd = () => {
+    if(quantityToAdd > 0){
+      if(inCart(id)){
+        editCount(id, quantityToAdd);
+      } else {
+        addItem({
+        id,
+        title,
+        category,
+        price,
+        quantityToAdd
+      });
+      }
+    }
   }
+
 
   return (
     
     <div className="card productDetail" >
-      <img src={item.image} className="card-img-top" alt={item.title} />
-      <div className="card-body">
-        <h5 className="card-title">{item.title}</h5>
-        <p className="card-text">{item.description}</p>
-        <p className="card-price">Precio $ {item.price}</p>
+      <img src={image} className="card-img-top" alt={title} />
+      <div className="card-body body-detail">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
+        <p className="card-price">Precio $ {price}</p>
       
-        {quantityToAdd ?
+        {inCart(id) ?
+          <span className="product-added">Producto agregado</span>
+         : 
+         null
+        }
+        <ItemCount stock={5} quantityToAdd={quantityToAdd} setQuantityToAdd={setQuantityToAdd} onAdd={onAdd} />
         <NavLink to="/cart">
-          <button className="btn btn-primary shop-end">
+          <button className="btn btn-primary shop-end" >
             Finalizar compra
           </button>
         </NavLink>
-         : 
-        <ItemCount stock={5} initial={0} onAdd={onAdd}/> }
-        
+             
       </div>
     </div>
   )

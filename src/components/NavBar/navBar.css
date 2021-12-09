@@ -1,13 +1,11 @@
 
-.nav-link{
-  cursor: pointer;
-}
-
 .nav-item{
   align-self: center;
+  cursor: pointer;
+  margin: 0.5rem;
 }
 
-.nav-link:hover{
+.nav-item:hover{
   font-weight: 600;
 }
 

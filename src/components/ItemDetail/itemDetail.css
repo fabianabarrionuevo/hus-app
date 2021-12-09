@@ -10,6 +10,15 @@
   max-width: 15rem;
 }
 
+.body-detail {
+  height: fit-content;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-title{
   margin-bottom: 1rem;
 }
@@ -19,6 +28,6 @@
   font-size: 1.2rem;
 }
 
-.shop-end{
-  margin-top: 1.5rem;
+.product-added{
+  color: red;
 }
