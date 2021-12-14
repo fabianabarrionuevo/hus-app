@@ -1,36 +1,7 @@
 
 .item-list-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-.productItem{
-  width: 18rem;
-}
-.productItem, .productDetail {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  text-align: center;
-  padding: 1rem;
-}
-
-.card-body{
-  max-height: 30rem;
-  max-width: 20rem;
-}
-
-.product-title{
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.card-img-top{
-  max-width: 3rem;
-  width: 35%;
-  align-self: center;
-}
-
-.itemLink{
-  text-decoration: none;
-  color: black;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

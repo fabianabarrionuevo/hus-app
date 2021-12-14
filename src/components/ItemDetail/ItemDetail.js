@@ -4,8 +4,8 @@ import ItemCount from "../Counter/ItemCount";
 import './itemDetail.css';
 import { CartContext } from "../../context/CartContext";
 
-function ItemDetail({ item }) {
-  const {id, title, category, price, image, description } = item;
+function ItemDetail({ product }) {
+  const {id, name, category, price, image, description } = product;
 
   const {cart, addItem, inCart, editCount} = useContext(CartContext);
 
@@ -18,22 +18,23 @@ function ItemDetail({ item }) {
       } else {
         addItem({
         id,
-        title,
+        name,
         category,
         price,
+        image,
         quantityToAdd
       });
       }
     }
   }
-
+console.log(cart);
 
   return (
     
     <div className="card productDetail" >
-      <img src={image} className="card-img-top" alt={title} />
+      <img src={image} className="card-img-top" alt={name} />
       <div className="card-body body-detail">
-        <h5 className="card-title">{title}</h5>
+        <h5 className="card-title">{name}</h5>
         <p className="card-text">{description}</p>
         <p className="card-price">Precio $ {price}</p>
       

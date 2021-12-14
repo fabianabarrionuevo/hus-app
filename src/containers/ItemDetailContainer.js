@@ -1,30 +1,44 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetail from '../components/ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
-import { getProductsById } from '../services/getItems';
 import Loader from '../components/Loader/Loader';
+import ItemDetail from '../components/ItemDetail/ItemDetail';
+import { doc, getDoc } from 'firebase/firestore/lite';
+import { db } from '../firebase/config';
 
 function ItemDetailContainer() {
   
-  const [ item, setItem ] = useState();
-  const [ loading, setLoading ] = useState(false);
+  const [ loading, setLoading ] = useState(true);
   const { productId } = useParams();
+  const [ item, setItem ] = useState();
  
 
   useEffect(() => {
-    getProductsById(productId)
-    .then(res => {
-      setItem(res);
-      setLoading(true);
-    })
-    .catch(error => console.log(error))
+
+    //1-armar la referencia a mi coleccion o documento
+    const docRef = doc(db, 'productos', productId)
+    //2-hacer la peticion a esa referencia
+    getDoc(docRef)
+      .then((doc) => {
+        const data = {
+          id: doc.id,
+          ...doc.data()
+        }
+        setItem(data);
+      })
+      .finally(() => {
+        setLoading(false)
+      })
 
   }, []);
  
-  
+
   return (
     <div>
-      {loading ? <ItemDetail item={item} /> : <Loader />}
+      {
+        loading ?
+        <Loader /> : 
+        <ItemDetail product={item} /> 
+      }
     </div>
   )
 }

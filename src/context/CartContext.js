@@ -28,11 +28,9 @@ import React, { createContext, useState } from "react";
   }
 
   const editCount = ( id, quantity) => {
-    let newCart = cart.map(item => item.id === id ? {...item, quantityToAdd: item.quantityToAdd + quantity} : item )
+    let newCart = cart.map(item => item.id === id ? {...item, quantityToAdd: quantity} : item )
     setCart(newCart)
 }
-
-  console.log(cart);
 
   return (
     <CartContext.Provider value = {{

@@ -1,4 +1,6 @@
-
+.navbar{
+  background-color: #ffebd2;
+}
 .nav-item{
   align-self: center;
   cursor: pointer;

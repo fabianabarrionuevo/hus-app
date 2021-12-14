@@ -1,0 +1,6 @@
+.cart-widget{
+  color: var(--main-color-pink);
+}
+.cart-widget:hover{
+  color:  var(--main-color-pink-hover);
+}

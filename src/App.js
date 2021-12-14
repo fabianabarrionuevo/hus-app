@@ -6,6 +6,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import CartProvider  from './context/CartContext';
+import Baner from './components/baner/Baner';
 
 function App() {
   
@@ -14,9 +15,7 @@ function App() {
       <div className='app'>
         <Router>
           <NavBar />
-          <header className="App-header">
-            <h1>Bienvenidos a nuestra app oficial</h1>
-          </header>
+          <Baner />
           <Switch>
             <Route exact path='/' component={ItemListContainer}/>
             <Route exact path='/cart' component={Cart}/>

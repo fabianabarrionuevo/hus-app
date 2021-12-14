@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, useHistory } from "react-router-dom";
 import Logo from '../Logo/Logo'
-import CartWidget from "../Cart/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import './navBar.css';
 
 
@@ -8,18 +8,18 @@ function NavBar() {
   const history = useHistory();
   return (
     <Router>
-    <nav className="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg fixed-top">
     <div className="container-fluid">
       <div onClick={ () => history.push('/')} >
         <Logo />
       </div>
-      <div className="navbar-brand" onClick={ () => history.push('/')}>HUS</div>
+      <h1 className="navbar-brand" onClick={ () => history.push('/')}>CakeStore</h1>
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
       </button>
       <div className="offcanvas offcanvas-end" tabIndex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">CakeStore</h5>
           <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
@@ -27,19 +27,16 @@ function NavBar() {
             <li className="nav-item" onClick={ () => history.push('/')}>
               Home
             </li>
-            <li className="nav-item" onClick={ () => history.push('/category/electronics')}>
-              Electronica
+            <li className="nav-item" onClick={ () => history.push('/category/tortas')}>
+              Tortas
             </li>
-            <li className="nav-item" onClick={ () => history.push('/category/jewelery')}>
-              Joyeria
+            <li className="nav-item" onClick={ () => history.push('/category/boxes')}>
+              Combos y desayunos
             </li>
-            <li className="nav-item" onClick={ () => history.push("/category/men")}>
-              Ropa de Hombre
+            <li className="nav-item" onClick={ () => history.push("/category/mini-cakes")}>
+              Mini cakes
             </li>
-            <li className="nav-item" onClick={ () => history.push("/category/women")}>
-             Ropa de Mujer
-            </li>
-            <li className="nav-item">
+            <li className="nav-item" onClick={ () => history.push("/cart")}>
                 <CartWidget />
             </li>
           </ul>

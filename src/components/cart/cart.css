@@ -1,8 +1,35 @@
-.cart-widget{
-  color: #ffa4b8;
-}
 
 .products-qty{
   position: relative;
   bottom: 10px;
+}
+
+.item-section{
+  width: 80%;
+  margin: 0 auto;
+}
+.item-image{
+  width: 200px;
+}
+
+.delete-item-button{
+  border: 0px transparent;
+  background-color: transparent;
+}
+.fa-trash-alt{
+  color: var(--main-color-pink);
+}
+.fa-trash-alt:hover{
+  color: var(--main-color-pink-hover);
+}detail-btn
+
+.go-back-button{
+  border-radius: 4px;
+  background-color: var(--main-color-pink);
+  border: transparent;
+  padding: 0.5rem 1rem;
+}
+.go-back-button:hover{
+  background-color: var(--main-color-pink-hover);
+
 }
