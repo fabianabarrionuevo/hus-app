@@ -11,7 +11,7 @@ function Item ({ productItem }) {
         <h5 className="card-title product-title">{productItem.name}</h5>
         <p>Precio $ {productItem.price}</p>
         <NavLink to={`/${productItem.id}`} className="itemLink">
-          <button className="detail-btn">Detalle</button>
+          <button className="detail-btn">Ver producto</button>
         </NavLink>
       </div>
     </div>

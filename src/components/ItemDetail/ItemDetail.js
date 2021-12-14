@@ -43,12 +43,16 @@ console.log(cart);
          : 
          null
         }
-        <ItemCount stock={5} quantityToAdd={quantityToAdd} setQuantityToAdd={setQuantityToAdd} onAdd={onAdd} />
-        <NavLink to="/cart">
-          <button className="btn btn-primary shop-end" >
-            Finalizar compra
-          </button>
-        </NavLink>
+        {
+          !inCart(id) ?
+          <ItemCount stock={5} quantityToAdd={quantityToAdd} setQuantityToAdd={setQuantityToAdd} onAdd={onAdd} />  
+          :
+          <NavLink to="/cart">
+            <button className="btn-shop-end" >
+              Finalizar compra
+            </button>
+          </NavLink>
+        }
              
       </div>
     </div>

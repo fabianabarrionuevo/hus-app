@@ -25,11 +25,11 @@ function Cart () {
             return (
               <article key={item.id} className='item-article'>
                 <img src={item.image} alt={item.name} className='item-image'/>
-                <h3 className='item-name'>{item.name}</h3>
-                <p className='item-price'>Cantidad {item.quantityToAdd}</p>
-                <p className='item-price'>$ {item.price}</p>
+                  <h3 className='item-name'>{item.name}</h3>
+                  <p className='item-quantity'>Cantidad {item.quantityToAdd}</p>
+                  <p className='item-price'>$ {item.price}</p>
                 <div className='control-buttons'>
-                  <button className='delete-item-button' onClick={() => removeItem(item.id)}>Eliminar <i class="fas fa-trash-alt"></i></button>
+                  <button className='delete-item-button' onClick={() => removeItem(item.id)}>Eliminar <i className="fas fa-trash-alt"></i></button>
                 </div>
               </article>
             )
@@ -40,7 +40,7 @@ function Cart () {
         </section>
       </div> :
       <div>
-          <h1>Productos agregados</h1> 
+          <h1>No hay productos agregados</h1> 
           <button onClick={ () => history.push("/")} className='go-back-button'>Volver al inicio</button>
       </div>
       }

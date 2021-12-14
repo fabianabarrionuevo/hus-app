@@ -1,6 +1,6 @@
 .productDetail{
-  width:fit-content;
-  max-width: 80%;
+  width:70%;
+  max-width: 850px;
   margin: 1rem auto 3rem;
   display: flex;
   flex-direction: row;
@@ -8,6 +8,8 @@
 
 .card-img-top{
   max-width: 15rem;
+  margin: 1rem;
+  border-radius: 8px;
 }
 
 .body-detail {
@@ -15,7 +17,6 @@
   max-width: 90vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -30,4 +31,17 @@
 
 .product-added{
   color: red;
+}
+
+.btn-shop-end{
+  margin: 0.1rem;
+  font-size: 0.8rem;
+  background-color: var(--main-color-pink);
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #fff;
+}
+.btn-shop-end:hover{
+  background-color: var(--main-color-pink-hover);
 }

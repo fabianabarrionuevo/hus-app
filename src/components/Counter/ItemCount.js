@@ -12,10 +12,12 @@ function ItemCount({stock, quantityToAdd, onAdd, setQuantityToAdd}) {
 
   return (
       <div className="card-body counter">
-        <button onClick={substractItem} className="btn btn-primary">-</button>
-        <input type="text" id="txt" value={quantityToAdd} readOnly />
-        <button onClick={() => addItem(stock)} className="btn btn-primary">+</button>
-        <button onClick={onAdd} className="btn btn-primary">Agregar al carrito</button>
+        <div className='counter-container'>
+          <button onClick={substractItem} className="counter-btn">-</button>
+          <input type="text" id="txt" value={quantityToAdd} readOnly />
+          <button onClick={() => addItem(stock)} className="counter-btn">+</button>
+        </div>
+        <button onClick={onAdd} className="counter-btn">Agregar al carrito</button>
       </div>
   )
 }

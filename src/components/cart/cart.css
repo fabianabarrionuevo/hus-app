@@ -1,15 +1,32 @@
 
-.products-qty{
-  position: relative;
-  bottom: 10px;
+.item-section{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  
 }
 
-.item-section{
-  width: 80%;
-  margin: 0 auto;
+.item-article{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 0.5rem;
 }
+.item-name, .item-price, .item-quantity {
+  margin: 0;
+}
+
+.item-name {
+  max-width: 210px;
+}
+
 .item-image{
   width: 200px;
+  border-radius: 8px;
 }
 
 .delete-item-button{
@@ -21,11 +38,12 @@
 }
 .fa-trash-alt:hover{
   color: var(--main-color-pink-hover);
-}detail-btn
+}
 
 .go-back-button{
   border-radius: 4px;
   background-color: var(--main-color-pink);
+  color: #fff;
   border: transparent;
   padding: 0.5rem 1rem;
 }

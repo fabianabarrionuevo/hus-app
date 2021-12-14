@@ -1,3 +1,7 @@
+.products-qty{
+  position: relative;
+  bottom: 10px;
+}
 .cart-widget{
   color: var(--main-color-pink);
 }
