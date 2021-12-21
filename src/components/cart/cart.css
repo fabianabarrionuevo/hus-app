@@ -1,4 +1,6 @@
-
+.cart-container{
+  text-align: center;
+}
 .item-section{
   display: flex;
   flex-direction: column;
@@ -46,8 +48,35 @@
   color: #fff;
   border: transparent;
   padding: 0.5rem 1rem;
+  text-decoration: none;
 }
 .go-back-button:hover{
   background-color: var(--main-color-pink-hover);
+  color: #fff;
+}
 
+.button-cart{
+  border-radius: 4px;
+  color: #fff;
+  border: transparent;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+}
+.button-cart:hover{
+  color: #fff;
+}
+.clear{
+  background-color: #fb6b78;
+}
+.clear:hover{
+  background-color: red;
+}
+.end{
+  background-color: var(--main-color-pink);
+  text-decoration: none;
+}
+.end:hover{
+  background-color: var(--main-color-pink-hover);
 }

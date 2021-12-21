@@ -1,22 +1,18 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { Link } from 'react-router-dom';
 import './cart.css';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Cart () {
 
-  const history = useHistory();
-
-  const {cart, removeItem} = useContext(CartContext);
+  const {cart, removeItem, clearCart, totalCart} = useContext(CartContext);
   console.log(cart);
 
-  const totalCart = cart.reduce((total, item) => {
-    return total += item.price * item.quantityToAdd; 
-  }, 0)
 
   return (
-    <div>
+    <div className='cart-container'>
       {cart.length > 0 ?  
       <div>
         <h1>Productos agregados</h1>  
@@ -36,12 +32,15 @@ function Cart () {
           })}
         </section>
         <section className='total-cart'>
-          El total de su compra es $ {totalCart}
+          <h3>El total de su compra es $ {totalCart}</h3>
+          <button className='button-cart clear' onClick={clearCart}>Vaciar Carrito</button>
+          <Link to='/checkout' className='button-cart end'>Finalizar compra</Link>
         </section>
       </div> :
+
       <div>
           <h1>No hay productos agregados</h1> 
-          <button onClick={ () => history.push("/")} className='go-back-button'>Volver al inicio</button>
+          <NavLink to='/' className='go-back-button'>Volver al inicio</NavLink>
       </div>
       }
     </div>

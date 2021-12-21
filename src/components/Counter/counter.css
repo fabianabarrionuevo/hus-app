@@ -1,3 +1,7 @@
+.counter{
+  display: flex;
+  flex-direction: column;
+}
 .counter-container button{
   margin: 0.5rem;
 }
@@ -15,7 +19,7 @@
   background-color: var(--main-color-pink-hover);
 }
 
-input{
+.counter-input{
   width: 6rem;
   text-align: center;
 }

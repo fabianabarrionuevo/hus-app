@@ -32,6 +32,10 @@ import React, { createContext, useState } from "react";
     setCart(newCart)
 }
 
+  const totalCart = cart.reduce((total, item) => {
+    return total += item.price * item.quantityToAdd;
+  }, 0)
+
   return (
     <CartContext.Provider value = {{
         cart,
@@ -39,7 +43,8 @@ import React, { createContext, useState } from "react";
         removeItem,
         inCart,
         clearCart,
-        editCount
+        editCount,
+        totalCart
     }}>
       {children}
     </CartContext.Provider>

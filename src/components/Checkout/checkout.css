@@ -1,0 +1,21 @@
+.checkout-container{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.checkout-title{
+  text-align: center;
+}
+.checkout-form{
+  display: flex;
+  flex-direction: column;
+}
+.form-floating{
+  margin: 1rem;
+}
+
+.send{
+  width: 30%;
+  margin: 0 auto;
+}
