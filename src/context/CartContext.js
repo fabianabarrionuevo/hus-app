@@ -1,5 +1,4 @@
-import React, { createContext, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import React, { createContext, useState, useEffect } from "react";
 
  export const CartContext = createContext();
 
@@ -9,12 +8,12 @@ import { useEffect } from "react/cjs/react.development";
 
   useEffect(() => {
     let data = localStorage.getItem('cart');
-    if(data != null){
+    if(data !== null){
       setCart(JSON.parse(data));
     } else {
       setCart([]);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
@@ -22,7 +21,7 @@ import { useEffect } from "react/cjs/react.development";
  
   const addItem = (item) => {
       setCart([...cart, item]);
-  }
+  };
 
   const removeItem = (id) => {
     const newCart = cart.filter(item => item.id !== id);
