@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/App.css';
 import NavBar from './components/NavBar/NavBar';
-import Baner from './components/baner/Baner';
+import Baner from './components/Baner/Baner';
+import Footer from './components/Footer/Footer';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
@@ -24,6 +25,7 @@ function App() {
             <Route exact path='/category/:categoryName' component={ItemListContainer}/>
             <Route exact path='/:productId' component={ItemDetailContainer}/>
           </Switch>
+          <Footer />
         </Router>
       </div>
     </CartProvider>

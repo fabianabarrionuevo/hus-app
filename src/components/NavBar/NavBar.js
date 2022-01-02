@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, useHistory } from "react-router-dom";
 import Logo from '../Logo/Logo'
 import CartWidget from "../CartWidget/CartWidget";
+import '../../styles/index.css';
 import './navBar.css';
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
@@ -28,7 +29,7 @@ function NavBar() {
         </div>
         <div className="offcanvas-body">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li className="nav-item" onClick={ () => history.push('/')}>
+            <li className="nav-item home" onClick={ () => history.push('/')}>
               Home
             </li>
             <li className="nav-item" onClick={ () => history.push('/category/tortas')}>

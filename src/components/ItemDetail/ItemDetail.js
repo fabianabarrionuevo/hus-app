@@ -5,10 +5,9 @@ import './itemDetail.css';
 import { CartContext } from "../../context/CartContext";
 
 function ItemDetail({ product }) {
-  const {id, name, category, price, image, description } = product;
 
-  const {cart, addItem, inCart, editCount} = useContext(CartContext);
-
+  const { id, name, category, price, image, description, stock } = product;
+  const { addItem, inCart, editCount } = useContext(CartContext);
   const [quantityToAdd, setQuantityToAdd] = useState(0);
 
   const onAdd = () => {
@@ -27,7 +26,6 @@ function ItemDetail({ product }) {
       }
     }
   }
-console.log(cart);
 
   return (
     
@@ -45,12 +43,10 @@ console.log(cart);
         }
         {
           !inCart(id) ?
-          <ItemCount stock={5} quantityToAdd={quantityToAdd} setQuantityToAdd={setQuantityToAdd} onAdd={onAdd} />  
+          <ItemCount stock={stock} quantityToAdd={quantityToAdd} setQuantityToAdd={setQuantityToAdd} onAdd={onAdd} />  
           :
-          <NavLink to="/cart">
-            <button className="btn-shop-end" >
+          <NavLink to="/cart" className="btn-shop-end">
               Finalizar compra
-            </button>
           </NavLink>
         }
              

@@ -7,10 +7,10 @@ import { db } from '../firebase/config';
 
 function ItemDetailContainer() {
   
-  const [ loading, setLoading ] = useState(true);
-  const { productId } = useParams();
   const [ item, setItem ] = useState();
- 
+  const [ loading, setLoading ] = useState(true);
+  
+  const { productId } = useParams();
 
   useEffect(() => {
 
@@ -29,8 +29,7 @@ function ItemDetailContainer() {
         setLoading(false)
       })
 
-  }, []);
- 
+  }, [productId]);
 
   return (
     <div>

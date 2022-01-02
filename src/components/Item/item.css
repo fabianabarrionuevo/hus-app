@@ -22,11 +22,9 @@
   align-self: center;
 }
 
-.itemLink{
+.detail-btn{
   text-decoration: none;
   color: black;
-}
-.detail-btn{
   background-color: var(--main-color-pink);
   color: white;
   border-radius: 4px;
@@ -34,5 +32,6 @@
   padding: 0.4rem 1rem;
 }
 .detail-btn:hover{
+  color: white;
   background-color: var(--main-color-pink-hover);
 }

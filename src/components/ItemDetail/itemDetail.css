@@ -21,7 +21,9 @@
 }
 
 .card-title{
+  font-weight: 900;
   margin-bottom: 1rem;
+  color: var(--main-color-pink-hover);
 }
 
 .card-price{
@@ -30,18 +32,21 @@
 }
 
 .product-added{
+  margin: 5px;
   color: red;
 }
 
 .btn-shop-end{
-  margin: 0.1rem;
+  margin-top: 2rem;
   font-size: 0.8rem;
   background-color: var(--main-color-pink);
-  border: 1px solid grey;
+  text-decoration: none;
+  border: 0px;
   border-radius: 4px;
   padding: 5px 10px;
   color: #fff;
 }
 .btn-shop-end:hover{
   background-color: var(--main-color-pink-hover);
+  color: #fff;
 }

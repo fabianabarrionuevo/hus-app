@@ -1,14 +1,21 @@
 .navbar{
-  background-color: #ffebd2;
+  background-color: var(--main-color-light-pink);
 }
 .nav-item{
   align-self: center;
   cursor: pointer;
   margin: 0.5rem;
 }
+.nav-item.home {
+  font-family: 'Meow Script', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color-pink-hover);
+}
 
 .nav-item:hover{
   font-weight: 600;
+  color: black;
 }
 
 .fa-shopping-cart{

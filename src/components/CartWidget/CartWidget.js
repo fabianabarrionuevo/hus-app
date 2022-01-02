@@ -11,7 +11,6 @@ function CartWidget () {
     return totalItems += item.quantityToAdd;
   }, 0)
 
-
   return(
     <Link to="/cart" className="cart-widget">
       <i className="fas fa-shopping-cart">

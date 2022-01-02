@@ -1,12 +1,13 @@
 .cart-container{
   text-align: center;
+  min-height: 60vh;
+  padding: 2rem;
 }
 .item-section{
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: 0 auto;
-  
 }
 
 .item-article{
@@ -22,13 +23,17 @@
   margin: 0;
 }
 
+.item-image{
+  width: 5rem;
+  border-radius: 8px;
+}
 .item-name {
-  max-width: 210px;
+  font-size: 22px;
+  max-width: 150px;
 }
 
-.item-image{
-  width: 200px;
-  border-radius: 8px;
+.total-cart{
+  margin-top: 4rem;
 }
 
 .delete-item-button{
@@ -78,5 +83,5 @@
   text-decoration: none;
 }
 .end:hover{
-  background-color: var(--main-color-pink-hover);
+  background-color: #04bd86;
 }

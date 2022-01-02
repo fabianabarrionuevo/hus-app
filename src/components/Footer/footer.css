@@ -1,0 +1,29 @@
+.contact-conatiner{
+  background-color: var(--main-color-light-pink);
+}
+
+.contacts-items{
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: 600;
+  display: flex;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-items > li {
+  list-style: none;
+  padding: 2rem;
+}
+ .contacts-items > li:hover p , .contacts-items > li:hover a {
+  color: var(--main-color-pink-hover);
+  cursor: pointer;
+}
+
+.contacts-items > li > a, .contacts-items p{
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  text-align: center;
+}

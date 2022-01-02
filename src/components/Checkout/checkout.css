@@ -18,4 +18,10 @@
 .send{
   width: 30%;
   margin: 0 auto;
+  border: 0px;
+  background-color: var(--main-color-pink);
+}
+
+.send:hover{
+  background-color: var(--main-color-pink-hover);
 }

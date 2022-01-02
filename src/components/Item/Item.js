@@ -10,8 +10,8 @@ function Item ({ productItem }) {
       <div className="card-body">
         <h5 className="card-title product-title">{productItem.name}</h5>
         <p>Precio $ {productItem.price}</p>
-        <NavLink to={`/${productItem.id}`} className="itemLink">
-          <button className="detail-btn">Ver producto</button>
+        <NavLink to={`/${productItem.id}`} className="detail-btn">
+          Ver producto
         </NavLink>
       </div>
     </div>
