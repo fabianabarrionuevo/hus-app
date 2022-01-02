@@ -47,6 +47,10 @@ import { useEffect } from "react/cjs/react.development";
     return total += item.price * item.quantityToAdd;
   }, 0)
 
+  const itemsInCart = cart.reduce((totalItems, item) => {
+    return totalItems += item.quantityToAdd;
+  }, 0)
+
   return (
     <CartContext.Provider value = {{
         cart,
@@ -55,7 +59,8 @@ import { useEffect } from "react/cjs/react.development";
         inCart,
         clearCart,
         editCount,
-        totalCart
+        totalCart,
+        itemsInCart
     }}>
       {children}
     </CartContext.Provider>

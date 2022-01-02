@@ -3,13 +3,9 @@ import Logo from '../Logo/Logo'
 import CartWidget from "../CartWidget/CartWidget";
 import '../../styles/index.css';
 import './navBar.css';
-import { CartContext } from "../../context/CartContext";
-import { useContext } from "react";
-
 
 function NavBar() {
   const history = useHistory();
-  const { cart } = useContext(CartContext);
 
   return (
     <Router>
@@ -41,16 +37,9 @@ function NavBar() {
             <li className="nav-item" onClick={ () => history.push("/category/mini-cakes")}>
               Mini cakes
             </li>
-            {
-              cart.length > 0 ?
             <li className="nav-item" onClick={ () => history.push("/cart")}>
                 <CartWidget />
             </li>
-            :
-            <li className="nav-item">
-            </li>
-
-            }
           </ul>
         </div>
       </div>

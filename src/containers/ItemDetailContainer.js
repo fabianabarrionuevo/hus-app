@@ -13,10 +13,8 @@ function ItemDetailContainer() {
   const { productId } = useParams();
 
   useEffect(() => {
-
-    //1-armar la referencia a mi coleccion o documento
-    const docRef = doc(db, 'productos', productId)
-    //2-hacer la peticion a esa referencia
+    const docRef = doc(db, 'productos', productId);
+   
     getDoc(docRef)
       .then((doc) => {
         const data = {
@@ -32,7 +30,7 @@ function ItemDetailContainer() {
   }, [productId]);
 
   return (
-    <div>
+    <div className='itemDetailContainer'>
       {
         loading ?
         <Loader /> : 
