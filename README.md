@@ -5,6 +5,8 @@ También usa useContext para poder guardar los datos de cart y que los mismos es
 Usa UseParams para captar el parametro de la URL que se esta mostrando y asi renderizar diferente información, como categorias de productos buscados o cuando quiero ver el detalle de un producto en particular.
 Usa react-router-dom para la navegacion entre pestañas desde la navbar.
 
+Proyecto con deploy en netlify https://serene-blackwell-ce1c13.netlify.app/
+
 # Informacion sobre la app creada con Create React App
 # Getting Started with Create React App
 
